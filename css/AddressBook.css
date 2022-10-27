@@ -121,5 +121,5 @@ a{
     justify-content: space-between;
 }
 .sameline{
-    display: inline;
+    display: flex;
 }

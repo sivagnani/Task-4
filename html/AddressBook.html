@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/AddressBook.css">
+        <script src="../JS/AddressBook.js"></script>
+    </head>
+    <body onload="load()">
+        <header class="header">
+            <h1 class="mainHeading">
+                Address Book
+            </h1>
+        </header>
+        <nav class="navigationBar">
+            <div class="nav">
+                <div class="navItem  activePage"><a class="navigate">HOME</a></div>
+                <div class="navItem"><a class="navigate">+ADD</a></div>
+            </div>
+            <div><img src="../media/blog-icon.png" class="icon"></div>
+        </nav>
+        <div class="contacts">
+            <div class="contactSummary" id="summary">
+                <p class="contact">CONTACTS</p>
+                <p>Email: </p><p class="sameline" id="detailedEmail">hiiiiii</p>
+            </div>
+            <div class="contactInfo">
+                <div class="nameBar">
+                    <h1 id="detailedName"></h1>
+                    <div class="modifyBar">
+                        <div class="modify">
+                            <img class="editSymbol" src="../media/edit1.jpg">
+                            <a href="">EDIT</a>
+                        </div>
+                        <div class="modify">
+                            <img class="deleteSymbol" src="../media/delete2.png">
+                            <a href="">DELETE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <p>Email: </p><p class="sameline" id="detailedEmail">hiiiiii</p>
+                    <p>Mobile: </p><p class="sameline" id="detailedMobile"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

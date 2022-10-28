@@ -68,6 +68,10 @@ h1{
 p{
     margin: 0px ;
 }
+pre{
+    margin: 0px;
+    font-family: 'Leelawadee UI';
+}
 .contactSummary{
     width: 420px;
 }
@@ -75,8 +79,7 @@ p{
     border-width: 0.5px;
     border-color: #d0d0d0;
     border-style: solid;
-    font-family: 'Century Gothic';
-    padding: 10px;
+    padding: 5px 10px;
 }
 .eachContactSummary:hover{
     background-color: #cee7f2;
@@ -85,19 +88,22 @@ p{
 .contacts{
     display: flex;
     padding: 20px;
+    font-family:'Leelawadee UI';
+    color: rgb(83, 83, 83);
+    text-shadow: 0px 0px 1px;
 }
 .editSymbol{
     width: 15px;
     height: 15px;
-    margin-right: 5px;
+    margin: auto;
 }
 .deleteSymbol{
     width: 20px;
     height: 25px;
-    margin-right: 5px;
+    margin: auto;
 }
 .contactInfo{
-    margin: 50px 95px;
+    margin: 20px 90px;
     width: 540px;
     display: none;
 }
@@ -105,11 +111,17 @@ a{
     color: black;
     text-decoration: none;
 }
+.Name{
+    font-weight:lighter;
+}
 .active{
     background-color: #cee7f2;
 }
 .modify{
     display: flex;
+}
+.modify:hover{
+    cursor: pointer;
 }
 .modifyBar{
     width:170px;
@@ -120,6 +132,21 @@ a{
     display: flex;
     justify-content: space-between;
 }
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+}
 .sameline{
     display: flex;
+    font-size: 17px;
+}
+.btn{
+    margin-left: 5px;
+}
+.content{
+    margin-top: 15px;
+}
+#detailedName{
+    font-weight: normal;
 }

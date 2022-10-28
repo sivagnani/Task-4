@@ -23,20 +23,25 @@
             <div class="contactInfo">
                 <div class="nameBar">
                     <h1 id="detailedName"></h1>
+                    <div class="center">
                     <div class="modifyBar">
-                        <div class="modify">
+                        <div class="modify" >
                             <img class="editSymbol" src="../media/edit1.jpg">
-                            <a href="">EDIT</a>
+                            <a class="btn">EDIT</a>
                         </div>
-                        <div class="modify">
+                        <div class="modify" onclick="deleteDetails()">
                             <img class="deleteSymbol" src="../media/delete2.png">
-                            <a href="">DELETE</a>
+                            <a class="btn">DELETE</a>
                         </div>
+                    </div>
                     </div>
                 </div>
                 <div class="details">
-                    <div class="sameline"><p>Email: </p><p class="sameline" id="detailedEmail"></p></div>
-                    <div class="sameline"><p>Mobile: </p><p class="sameline" id="detailedMobile"></p></div>
+                    <div class="sameline content"><p>Email:</p>&nbsp;<pre id="detailedEmail"></pre></div>
+                    <div class="sameline content"><p>Mobile:</p>&nbsp;<pre id="detailedMobile"></pre></div>
+                    <div class="sameline"><p>Landline:</p>&nbsp;<pre id="detailedLandline"></pre></div>
+                    <div class="sameline content"><p>Website:</p>&nbsp;<pre id="detailedWebsite"></pre></div>
+                    <div class="sameline content"><p>Address:</p>&nbsp;<pre id="detailedAddress"></pre></div>
                 </div>
             </div>
         </div>

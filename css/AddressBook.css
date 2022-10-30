@@ -150,3 +150,59 @@ a{
 #detailedName{
     font-weight: normal;
 }
+.addForm{
+    width: 750px;
+    height: 550px;
+    margin: 20px 90px;
+    box-shadow: 0px 0px 25px;
+    padding: 5px;
+    display: none;
+}
+input{
+    height: 45px;
+    border-color:#919191;
+    border-width: 2px;
+    font-size: 20px;
+    border-style: solid;
+    width: 100%;
+    margin-bottom: 7px;
+}
+table{
+    padding-top: 20px;
+}
+td{
+    width: 275px;
+    padding-left: 20px;
+}
+.full{
+    height: 100%;
+}
+.rightSpace{
+    width: 125px;
+    padding-right: 25px;
+    padding-left: 0px;
+}
+.address{
+    height: 110px;
+}
+.addbtn{
+    height: 40px;
+    background-color: #468c00;
+    border-width: 0px;
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+}
+.addbtn:hover{
+    cursor: pointer;
+}
+textarea{
+    height: 45px;
+    border-color:#919191;
+    border-width: 2px;
+    font-size: 20px;
+    border-style: solid;
+    width: 100%;
+    margin-bottom: 7px;
+    resize: none;
+}

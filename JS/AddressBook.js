@@ -64,6 +64,12 @@ function deleteDetails(){
     }
 }
 function openForm(){
+    document.getElementById('newName').value="";
+    document.getElementById('newEmail').value="";
+    document.getElementById('newMobile').value="";
+    document.getElementById('newLandline').value="";
+    document.getElementById('newWebsite').value="";
+    document.getElementById('newAddress').value="";
     document.getElementById('addDetails').style.display="block";
     document.getElementsByClassName('contactInfo')[0].style.display="none";
     for(let j in list){
@@ -105,12 +111,6 @@ function editContact(){
         list[counter].landline = document.getElementById('newLandline').value;
         list[counter].website = document.getElementById('newWebsite').value;
         list[counter].address = document.getElementById('newAddress').value;
-        document.getElementById('newName').value="";
-        document.getElementById('newEmail').value="";
-        document.getElementById('newMobile').value="";
-        document.getElementById('newLandline').value="";
-        document.getElementById('newWebsite').value="";
-        document.getElementById('newAddress').value="";
         document.getElementById(variable+counter).getElementsByClassName('Name')[0].innerHTML=list[counter].name;
         document.getElementById(variable+counter).getElementsByClassName('Mail')[0].innerHTML=list[counter].email;
         document.getElementById(variable+counter).getElementsByClassName('Mobile')[0].innerHTML=list[counter].mobile;

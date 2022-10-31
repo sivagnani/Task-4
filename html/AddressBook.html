@@ -49,47 +49,47 @@
                     <form class="deatilsForm" id="createForm">
                         <tr>
                             <td>
-                                <label>Name</label>
+                                <label for="newName">Name</label>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="text" id="newName"></td><td class="rightSpace"></td>
+                            <td colspan="2"><input type="text" id="newName" onchange="validateName()"><p class="error" id="nameError">&nbsp;</p></td><td class="rightSpace"></td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Email</label>
+                                <label for="newEmail">Email</label>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="text" id="newEmail"></td>
+                            <td colspan="2"><input type="text" id="newEmail" onchange="validateEmail()"><p class="error" id="emailError">&nbsp;</p></td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Mobile</label>
+                                <label for="newMobile">Mobile</label>
                             </td>
                             <td>
-                                <label>Landline</label>
+                                <label for="newLandline">Landline</label>
                             </td>
                         </tr>
                         <tr>
-                            <td><input type="text" id="newMobile"></td>
-                            <td><input type="text" id="newLandline"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Website</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><input type="text" id="newWebsite"></td>
+                            <td><input type="text" id="newMobile" onchange="validateMobile()"><p class="error" id="mobileError">&nbsp;</p></td>
+                            <td><input type="text" id="newLandline" onchange="validateLandline()"><p class="error" id="landlineError">&nbsp;</p></td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Address</label>
+                                <label for="newWebsite">Website</label>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2"><textarea type="text" class="address" id="newAddress"></textarea></td>
+                            <td colspan="2"><input type="text" id="newWebsite" onchange="validateWebsite()"><p class="error" id="websiteError">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="newAddress">Address</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea type="text" class="address" id="newAddress" onchange="validateAddress()"></textarea><p class="error" id="addressError">&nbsp;</p></td>
                         </tr>
                         <tr>
                             <td></td>

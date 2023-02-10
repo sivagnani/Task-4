@@ -11,6 +11,7 @@ class Contact{
 let counter=0;
 let list = [];
 let variable = "eachContactSummary";
+let activeContact;
 var newcontact = new Contact("Chandermani Arora","chandermani@technovert.com","+91 9292929292","040301231211","http://www.technovert.com","123 now here\nSome street\nMadhapur, Hyderabad 500033");
 list.push(newcontact);
 var newcontact = new Contact("Sashi Pagadala","sashi@technovert.com","+91 9985528844","040301231211","http://www.technovert.com","123 now here\nSome street\nMadhapur, Hyderabad 500033");
@@ -27,19 +28,20 @@ function load(){
 function displaySummary(contact,i){
     let div = document.createElement("div");
     div.className = variable;
-    div.id=variable+i;
+    div.id=i;
     div.setAttribute('onclick','displayDetails(this.id)');
     div.innerHTML="<h1 class='Name'>"+contact.name+"</h1><p class='Mail'>"+contact.email+"</p><p class='Mobile'>"+contact.mobile+"</p>"
     document.getElementById("summary").appendChild(div);
 }
 function displayDetails(id){
+    activeContact=id;
     document.getElementById(id).className=variable+" active";
     document.getElementsByClassName('contactInfo')[0].style.display="block";
     document.getElementById('addDetails').style.display="none";
-    var i = id[id.length-1];
+    var i = id;
     for(let j in list){
-        if(j!=i && list[j].name!=null){
-            document.getElementById(variable+j).className=variable;
+        if(j!=i && list[j]){
+            document.getElementById(j).className=variable;
         }
     }
     counter=i;
@@ -61,14 +63,10 @@ function require(text){
 function deleteDetails(){
     let delname=document.getElementById('detailedName').textContent;
     if(confirm("Are you sure you want to delete "+delname+"'s details")==true){
-        for(let i=0;i<list.length;i++){
-            if(list[i].name==delname){
-                document.getElementById(variable+i).innerHTML=null;
-                document.getElementById(variable+i).remove();
-                document.getElementsByClassName('contactInfo')[0].style.display="none";
-                list[i].name=null;
-            }
-        }
+        document.getElementById(activeContact).innerHTML=null;
+        document.getElementById(activeContact).remove();
+        document.getElementsByClassName('contactInfo')[0].style.display="none";
+        list[activeContact]=null;
     }
 }
 function openForm(){
@@ -83,7 +81,7 @@ function openForm(){
     document.getElementById('createButton').value='Add';
     document.getElementById('createButton').setAttribute('onclick','createContact()');
     for(let j in list){
-        document.getElementById(variable+j).className=variable;
+        document.getElementById(j).className=variable;
     }
 }
 function createContact(){
@@ -99,7 +97,7 @@ function createContact(){
         list.push(contact);
         displaySummary(contact,list.length-1);
         document.getElementById("createForm").reset();
-        displayDetails(variable+(list.length-1));
+        displayDetails(list.length-1);
     }
 }
 }
@@ -124,10 +122,10 @@ function editContact(){
         list[counter].landline = document.getElementById('newLandline').value;
         list[counter].website = document.getElementById('newWebsite').value;
         list[counter].address = document.getElementById('newAddress').value;
-        document.getElementById(variable+counter).getElementsByClassName('Name')[0].innerHTML=list[counter].name;
-        document.getElementById(variable+counter).getElementsByClassName('Mail')[0].innerHTML=list[counter].email;
-        document.getElementById(variable+counter).getElementsByClassName('Mobile')[0].innerHTML=list[counter].mobile;
-        displayDetails(variable+counter)
+        document.getElementById(counter).getElementsByClassName('Name')[0].innerHTML=list[counter].name;
+        document.getElementById(counter).getElementsByClassName('Mail')[0].innerHTML=list[counter].email;
+        document.getElementById(counter).getElementsByClassName('Mobile')[0].innerHTML=list[counter].mobile;
+        displayDetails(counter)
     }
     }
 }
